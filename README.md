@@ -4,11 +4,6 @@
 
 Official PyTorch implementation of "Motion Prior Distillation in Time Reversal Sampling for Generative Inbetweening".
 
-<p align="center" width="100%">
-    <video src='./assets/teaser.mp4' width='99%' controls autoplay loop muted></video>
-</p>
-
-
 ### 1. Environment setup
 Our code is built on [generative-models](https://github.com/Stability-AI/generative-models).  
 Clone that repository and place `mpd_par.py` and `mpd_seq.py` into the `scripts/sampling` directory.  
