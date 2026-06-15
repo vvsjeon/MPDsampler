@@ -9,17 +9,16 @@ Official PyTorch implementation of "Motion Prior Distillation in Time Reversal S
 </p>
 
 
-### 1. Environment Setup
-Our source code is based on [generative-models](https://github.com/Stability-AI/generative-models).  
-Please clone the repository and place `mpd_par.py` and `mpd_seq.py` into the directory `scripts/sampling`.  
-Follow the environment setup instructions provided in the [generative-models](https://github.com/Stability-AI/generative-models).
+### 1. Environment setup
+Our code is built on [generative-models](https://github.com/Stability-AI/generative-models).  
+Clone that repository and place `mpd_par.py` and `mpd_seq.py` into the `scripts/sampling` directory.  
+Then follow the environment setup instructions provided in [generative-models](https://github.com/Stability-AI/generative-models).
 
 ---
 
-### 2. Pre-trained Model
+### 2. Pre-trained model
 Download the Stable Video Diffusion (SVD-XT) weights from [here](https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt).  
-Update the path to the downloaded model in the `ckpt_path` field of  
-`scripts/sampling/configs/svd_xt.yaml`.
+Then set the `ckpt_path` field in `scripts/sampling/configs/svd_xt.yaml` to the path of the downloaded model.
 
 ---
 
@@ -33,9 +32,13 @@ or
 ```
 python scripts/sampling/mpd_seq.py     ### Based on ViBiD
 ```
-+ The paths to the source frames should be specified using the flags ```input_start_path``` and ```input_end_path```. You can find some example pairs of start and end frames in the `examples/` folder.
-+ You can adjust the ```fps_id``` (approximately between 6 and 24) according to the specific use case.
++ Specify the source frames with the ```input_start_path``` and ```input_end_path``` flags. Example start–end frame pairs are provided in the `examples/` folder.
++ Adjust ```fps_id``` (roughly between 6 and 24) depending on your use case.
 
+
+## Acknowledgements
+
+The overall repository structure largely follows [ViBiDSampler](https://github.com/vibidsampler/vibid). We thank the authors for releasing their code.
 
 ## Citation
 
